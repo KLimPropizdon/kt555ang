@@ -1,11 +1,13 @@
-<div *ngFor="let work of allWorks" class="work-item" [routerLink]="['/works', work.id]">
+@for (work of allWorks; track work) {
+  <div class="work-item" [routerLink]="['/works', work.id]">
     <img [src]="work.main_img" alt="{{ work.title }}">
     <div class="work-details">
-        <h4>{{ work.title }}</h4>
-        <div class="work-meta">
-            <span class="year-badge">{{ work.year }}</span>
-            <span class="work-tags">{{ work.tags.join(', ') }}</span>
-        </div>
-        <p>{{ work.text }}</p> 
+      <h4>{{ work.title }}</h4>
+      <div class="work-meta">
+        <span class="year-badge">{{ work.year }}</span>
+        <span class="work-tags">{{ work.tags.join(', ') }}</span>
+      </div>
+      <p>{{ work.text }}</p>
     </div>
-</div>
+  </div>
+}

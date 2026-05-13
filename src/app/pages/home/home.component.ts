@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Work } from '../../models/work.model';
-import { CommonModule } from '@angular/common';
+
 import { RouterModule } from '@angular/router';
 import { WorkService } from '../../services/work.service';
 
 @Component({
   selector: 'app-home',
   standalone: true, 
-  imports: [CommonModule, RouterModule],
+  imports: [RouterModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })

@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CommonModule } from '@angular/common';
+
 import { Work } from '../../models/work.model';
 import { WorkService } from '../../services/work.service';
 
 @Component({
   selector: 'app-work-detail',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './work-detail.component.html',
   styleUrls: ['./work-detail.component.css']
 })
