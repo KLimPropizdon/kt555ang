@@ -1,0 +1,62 @@
+
+.narrow-container {
+    max-width: 680px;
+}
+
+h1 {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 50px;
+    margin-bottom: 30px;
+}
+
+.work-meta-detail {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.work-meta-detail .year-badge {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 16px;
+    padding: 2px 10px;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.work-meta-detail span {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.narrow-container > p {
+    margin-bottom: 30px;
+}
+
+.content-block {
+    margin-bottom: 30px;
+}
+
+.content-block h1 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.content-block h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.content-block img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.content-block p {
+    font-size: 16px;
+}

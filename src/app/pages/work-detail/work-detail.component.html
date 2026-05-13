@@ -1,0 +1,19 @@
+<div class="container narrow-container" *ngIf="work">
+
+    <h1>{{ work.full_title }}</h1>
+    
+    <div class="work-meta-detail">
+        <span class="year-badge red">{{ work.year }}</span>
+        <span>{{ work.tags.join(', ') }}</span>
+    </div>
+    
+
+    <p>{{ work.text }}</p>
+
+    <div *ngFor="let item of work.content" [ngSwitch]="item[0]" class="content-block">
+        <h1 *ngSwitchCase="'h1'">{{ item[1] }}</h1>
+        <h2 *ngSwitchCase="'h2'">{{ item[1] }}</h2>
+        <img *ngSwitchCase="'img'" [src]="item[1]" alt="{{ work.title }} detail image">
+        <p *ngSwitchCase="'text'">{{ item[1] }}</p>
+    </div>
+</div>

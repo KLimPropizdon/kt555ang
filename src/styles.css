@@ -1,0 +1,101 @@
+/* src/styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap');
+
+:root {
+    --primary-color: #FF6464;
+    --dark-color: #21243D;
+    --light-color: #8695A4;
+    --secondary-color: #142850;
+    --light-bg: #EDF7FA;
+    --divider-color: #E0E0E0;
+    --white-color: #FFFFFF;
+}
+
+body {
+    font-family: 'Heebo', sans-serif;
+    color: var(--dark-color);
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+.container {
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.main-content {
+    padding-bottom: 80px;
+}
+
+/* Общие стили для карточки работы (используется на Home и Works) */
+.work-item {
+    display: flex;
+    gap: 18px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--divider-color);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.work-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.work-item img {
+    width: 246px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0; /* Чтобы картинка не сжималась */
+}
+
+.work-item h4 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.work-item .work-meta {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 1rem;
+}
+
+.work-item .year-badge {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    border-radius: 16px;
+    padding: 2px 10px;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.work-item .work-tags {
+    color: var(--light-color);
+    font-size: 20px;
+}
+
+.work-item p {
+    color: var(--dark-color);
+    font-size: 16px;
+}

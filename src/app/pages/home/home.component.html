@@ -1,0 +1,64 @@
+
+<div class="container">
+
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>Hi, I am John,<br>Creative Technologist</h1>
+            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            <button class="btn-primary">Download Resume</button>
+        </div>
+        <div class="hero-image">
+            
+            <img src="../../img/ava.jpg" alt="John, Creative Technologist">
+        </div>
+    </section>
+</div>
+<section class="recent-posts-section">
+    <div class="container">
+        <div class="section-header">
+            <span>Recent posts</span>
+            <a href="#" class="view-all-link">View all</a>
+        </div>
+        <div class="posts-container">
+
+            <div class="post-card">
+                <h2>Making a design system from scratch</h2>
+                <div class="post-meta">
+                    <span>12 Feb 2020</span>
+                    <span class="divider">|</span>
+                    <span>Design, Pattern</span>
+                </div>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            </div>
+
+            <div class="post-card">
+                <h2>Creating pixel perfect icons in Figma</h2>
+                <div class="post-meta">
+                    <span>12 Feb 2020</span>
+                    <span class="divider">|</span>
+                    <span>Figma, Icon Design</span>
+                </div>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="featured-works-section">
+    <div class="container">
+        <h3>Featured works</h3>
+        <div class="work-list">
+            <div *ngFor="let work of featuredWorks" class="work-item" [routerLink]="['/works', work.id]">
+                <img [src]="work.main_img" alt="{{ work.title }}">
+                <div class="work-details">
+                    <h4>{{ work.title }}</h4>
+                    <div class="work-meta">
+                        <span class="year-badge">{{ work.year }}</span>
+                        <span class="work-tags">{{ work.tags[0] }}</span>
+                    </div>
+                    <p>{{ work.text }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
